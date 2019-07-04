@@ -1,0 +1,4 @@
+FROM mysql
+RUN apt-get update && apt-get install -y unzip
+COPY ./data/ /docker-entrypoint-initdb.d/
+RUN unzip /docker-entrypoint-initdb.d/test_db-master.zip
