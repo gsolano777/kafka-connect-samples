@@ -1,0 +1,15 @@
+{
+  "name": "samples.employees.target.sync.connecto",
+  "config": {
+    "connector.class": "at.grahsl.kafka.connect.mongodb.MongoDbSinkConnector",
+    "tasks.max": "2",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable":"false",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable":"false",
+    "topics": "samples.employees",
+    "mongodb.connection.uri": "mongodb://employees:employees123@mongo:27017/Employees",
+    "mongodb.collection": "Employees",
+    "errors.log.enable": true
+  }
+}

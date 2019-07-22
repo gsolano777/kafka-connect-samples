@@ -1,0 +1,26 @@
+{
+    "name":"samples.employees.source.sync.connector",
+    "config":{
+      "connector.class":"io.confluent.connect.jdbc.JdbcSourceConnector",
+      "tasks.max":"1",
+      "key.converter":"org.apache.kafka.connect.json.JsonConverter",
+      "key.converter.schemas.enable":"false",
+      "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+      "value.converter.schemas.enable":"false",
+      "connection.url":"jdbc:mysql://mysql-employees:3306/employees",
+      "connection.user":"root",
+      "connection.password":"123456",
+      "mode":"incrementing",
+      "incrementing.column.name": "emp_no",
+      "query": "select emp_no, birth_date, first_name, last_name, gender, hire_date from employees",
+      "producer.interceptor.classes": "io.confluent.monitoring.clients.interceptor.MonitoringProducerInterceptor",
+      "numeric.mapping":"best_fit",
+      "validate.non.null":"false",
+      "poll.interval.ms":3000,
+      "batch.max.rows":10000,
+      "timestamp.delay.interval.ms":0,
+      "topic.prefix":"samples.employees",
+      "errors.log.include.messages": true,
+      "errors.log.enable": true
+    }
+  }
