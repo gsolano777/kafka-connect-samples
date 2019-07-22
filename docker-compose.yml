@@ -8,6 +8,9 @@ services:
       MONGO_INITDB_DATABASE: Employees
     ports:
       - 27017:27017
+    volumes:
+      - ./mongo/data:/data/db
+      - ./mongo/init:/docker-entrypoint-initdb.d
 
   mysql-employees:
     image: mysql:8.0.16
