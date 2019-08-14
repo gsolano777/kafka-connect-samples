@@ -10,6 +10,17 @@
     "topics": "samples.employees",
     "mongodb.connection.uri": "mongodb://employees:employees123@mongo:27017/Employees",
     "mongodb.collection": "Employees",
+    "mongodb.post.processor.chain": "at.grahsl.kafka.connect.mongodb.processor.field.renaming.RenameByMapping",
+    "mongodb.field.renamer.mapping": "[{\"oldName\":\"value.emp_no\",\"newName\":\"employeeNumber\"},{\"oldName\":\"value.first_name\",\"newName\":\"firstName\"},{\"oldName\":\"value.lastName\",\"newName\":\"lastName\"},{\"oldName\":\"value.birth_date\",\"newName\":\"birthDate\"},{\"oldName\":\"value.hire_date\",\"newName\":\"hireDate\"},{\"oldName\":\"value.top_salary\",\"newName\":\"topSalary\"}]",
+    "transforms": "convertBirthDate,convertHireDate",
+    "transforms.convertBirthDate.type": "org.apache.kafka.connect.transforms.TimestampConverter$Value",
+    "transforms.convertBirthDate.target.type": "Timestamp",
+    "transforms.convertBirthDate.field": "birth_date",
+    "transforms.convertBirthDate.format": "dd-MM-yyyy HH:mm:ss",
+    "transforms.convertHireDate.type": "org.apache.kafka.connect.transforms.TimestampConverter$Value",
+    "transforms.convertHireDate.target.type": "Timestamp",
+    "transforms.convertHireDate.field": "hire_date",
+    "transforms.convertHireDate.format": "dd-MM-yyyy HH:mm:ss",
     "errors.log.enable": true
   }
 }
