@@ -7,7 +7,7 @@ For this project [MySQL Employees Sample Database](https://dev.mysql.com/doc/emp
 MySQL java connector/driver is located in /kafka-connect/drivers/mysql_driver/mysql-connector-java-8.0.16.jar. The driver is mapped to Kafka Connect volume path: /usr/share/java/kafka-connect-jdbc/mysql_driver
  
 # MongoDB
-The docker project is configured to create the required Mongo Collection **Employees** with user: **employess** and password: **employees123**. 
+The docker project is configured to create the required Mongo database **Employees** with user: **employess** and password: **employees123**. 
 
 All the data is persisted in volume path **/mongo/data:/data/db**.
 
