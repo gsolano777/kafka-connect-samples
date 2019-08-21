@@ -79,7 +79,7 @@ The plugins to run JDBC source connectors and MongoDB sink connectors are locate
 
 # Sample Connectors
 
-[Source and sink sample connectors](kafka-connect-samples/tree/master/kafka-connect/scripts) can be run using the REST API. 
+[Source and sink sample connectors](/kafka-connect/scripts) can be run using the REST API. 
 
 ```
 curl -H $CT -d "@samples.employees.source.json" -X POST http://localhost:8083/connectors
