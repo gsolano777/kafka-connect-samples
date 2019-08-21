@@ -73,6 +73,10 @@ mysql-employees_1  |
 mysql-employees_1  | MySQL init process done. Ready for start up.
 ```
 
+# Confluent Kafka Platform
+
+The project includes a modified version of [Confluent docker-compose project](https://github.com/confluentinc/cp-docker-images/blob/5.3.0-post/examples/cp-all-in-one/docker-compose.yml)
+
 # Kafka Connect Plugins
 
 The plugins to run JDBC source connectors and MongoDB sink connectors are located in /kafka-connect/plugins
