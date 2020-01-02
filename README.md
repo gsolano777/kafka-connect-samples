@@ -1,5 +1,6 @@
 # kafka-connect-samples
 A docker compose project to show how to use Kafka Connect to move data from MySQL database into MongoDB collections.
+More info in this [blog entry](https://gorillalogic.com/blog/how-to-pipe-your-data-with-kafka-connect/)
 
 # MySQL Database
 For this project [MySQL Employees Sample Database](https://dev.mysql.com/doc/employee/en/) will be used.
